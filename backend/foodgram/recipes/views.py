@@ -1,6 +1,7 @@
 from django.http.response import HttpResponse
 from django.shortcuts import get_object_or_404
 from rest_framework import status
+from rest_framework import filters
 from rest_framework.decorators import action
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
@@ -26,6 +27,8 @@ class IngredientViewSet(ReadOnlyModelViewSet):
     permission_classes = (IsAdminOrReadOnly,)
     pagination_class = None
     filterset_class = IngredientNameFilter
+    filter_backends = (filters.SearchFilter,)
+    search_fields = ('^name',)
 
 
 class RecipeViewSet(ModelViewSet):
