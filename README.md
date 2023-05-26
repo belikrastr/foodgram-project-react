@@ -9,6 +9,7 @@ GET http://127.0.0.1:8000/api/users/
 POST http://127.0.0.1:8000/api/users/
 Content-Type: application/json
 
+```json
 {
     "email": "user1@user1.ru",
     "username": "user1",
@@ -16,6 +17,7 @@ Content-Type: application/json
     "last_name": "user1",
     "password": "Abc2332325"
 }
+```
 
 
 # Профиль пользователя
