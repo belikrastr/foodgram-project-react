@@ -1,4 +1,9 @@
-# praktikum_new_diplom
+# Foodgram
+
+# Вполните миграции
+- python manage.py migrate
+# Создайте суперпользователя
+- python manage.py createsuperuser
 # Список пользователей
 ###
 GET http://127.0.0.1:8000/api/users/
