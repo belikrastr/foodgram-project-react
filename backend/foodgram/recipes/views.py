@@ -129,8 +129,8 @@ class RecipeViewSet(ModelViewSet):
                 f'{item} - {buying_list[item]["amount"]}, '
                 f'{buying_list[item]["measurement_unit"]}\n'
             )
-        response = HttpResponse(shopping_list, 'Content-Type: text/plain')
-        response['Content-Disposition'] = (
-            'attachment;' 'filename="shopping_list.txt"'
-        )
+        shopping_list_text = ''.join(shopping_list)
+        response = HttpResponse(content_type='text/plain')
+        response['Content-Disposition'] = 'attachment; filename="shopping_list.txt"'
+        response.write(shopping_list_text)
         return response

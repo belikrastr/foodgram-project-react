@@ -123,7 +123,7 @@ class Favorite(models.Model):
     )
 
     class Meta:
-        verbose_name = 'Избранный рецепт',
+        verbose_name = 'Избранный рецепт'
         verbose_name_plural = 'Избранные рецепты'
         constraints = [
             models.UniqueConstraint(
@@ -131,6 +131,9 @@ class Favorite(models.Model):
                 name='unique favorite recipe for user'
             )
         ]
+
+    def __str__(self) -> str:
+        return f'{self.user} - {self.recipe}'
 
 
 class Cart(models.Model):
@@ -155,3 +158,6 @@ class Cart(models.Model):
             models.UniqueConstraint(fields=['user', 'recipe'],
                                     name='unique cart user')
         ]
+
+    def __str__(self) -> str:
+        return f'{self.user} - {self.recipe}'
