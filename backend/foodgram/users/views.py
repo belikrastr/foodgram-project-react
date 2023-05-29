@@ -1,11 +1,10 @@
 from djoser.views import UserViewSet as DjoserViewSet
+from recipes.serializers import FollowSerializer
 from rest_framework import status
 from rest_framework.decorators import action
 from rest_framework.generics import get_object_or_404
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
-
-from recipes.serializers import FollowSerializer
 
 from .models import Follow, User
 from .pagination import LimitPageNumberPagination
