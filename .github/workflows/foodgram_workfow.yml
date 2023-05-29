@@ -47,9 +47,3 @@ jobs:
           tags: ${{ secrets.DOCKER_USERNAME }}/foodgram_backend:v28.05.2023
           file: backend/foodgram/Dockerfile
 
-      - name: Push frontend image to Docker Hub
-        uses: docker/build-push-action@v2
-        with:
-          push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/foodgram_frontend:v26.05.2023
-          file: frontend/Dockerfile
