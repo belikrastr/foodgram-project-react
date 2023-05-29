@@ -1,11 +1,11 @@
 from django.http.response import HttpResponse
 from django.shortcuts import get_object_or_404
-from rest_framework import status
-from rest_framework import filters
+from rest_framework import filters, status
 from rest_framework.decorators import action
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.viewsets import ModelViewSet, ReadOnlyModelViewSet
+
 from users.pagination import LimitPageNumberPagination
 
 from .filters import AuthorAndTagFilter, IngredientNameFilter
@@ -131,6 +131,8 @@ class RecipeViewSet(ModelViewSet):
             )
         shopping_list_text = ''.join(shopping_list)
         response = HttpResponse(content_type='text/plain')
-        response['Content-Disposition'] = 'attachment; filename="shopping_list.txt"'
+        response[
+            'Content-Disposition'
+        ] = 'attachment; filename="shopping_list.txt"'
         response.write(shopping_list_text)
         return response

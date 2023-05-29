@@ -1,10 +1,11 @@
-from recipes.serializers import FollowSerializer
 from djoser.views import UserViewSet as DjoserViewSet
 from rest_framework import status
 from rest_framework.decorators import action
 from rest_framework.generics import get_object_or_404
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
+
+from recipes.serializers import FollowSerializer
 
 from .models import Follow, User
 from .pagination import LimitPageNumberPagination
@@ -78,8 +79,10 @@ class CustomUserViewset(DjoserViewSet):
             if follow.exists():
                 follow.delete()
                 return Response(status=status.HTTP_204_NO_CONTENT)
-            return Response(serializer.data, {
+            return Response(
+                serializer.data, {
                     'errors': 'Вы не можете отписаться от автора, на которого'
                     ' не подписаны. Подпишитесь на него - он классный повар!'
-                })
+                }
+            )
         return Response(status=status.HTTP_204_NO_CONTENT)
