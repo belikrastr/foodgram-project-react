@@ -206,3 +206,4 @@ Authorization: Token de82a223ca36916a5fd4be6657caeec9a4618c8a
 GET  http://127.0.0.1:8000/api/ingredients/46002
 Authorization: Token de82a223ca36916a5fd4be6657caeec9a4618c8a
 
+.
