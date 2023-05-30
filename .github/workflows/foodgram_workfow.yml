@@ -57,7 +57,7 @@ jobs:
         script: |
           sudo docker-compose stop
           sudo docker-compose rm -f backend frontend
-          sudo docker image rm ibelikbot/foodgram_backend ibelikbot/foodgram_frontend
+          sudo docker image rm ${{ secrets.DOCKER_USERNAME }}/foodgram_backend:v28.05.2023 ${{ secrets.DOCKER_USERNAME }}/foodgram_frontend:v26.05.2023
           sudo docker-compose pull backend frontend
           touch .env
           echo DB_ENGINE=${{ secrets.DB_ENGINE }} >> .env
