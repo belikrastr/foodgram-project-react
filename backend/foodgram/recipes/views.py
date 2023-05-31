@@ -7,7 +7,7 @@ from rest_framework.response import Response
 from rest_framework.viewsets import ModelViewSet, ReadOnlyModelViewSet
 from users.pagination import LimitPageNumberPagination
 
-from .filters import AuthorAndTagFilter
+from .filters import AuthorAndTagFilter, IngredientNameFilter
 from .models import Cart, Favorite, Ingredient, Recipe, RecipeIngredient, Tag
 from .permissions import IsAdminOrReadOnly, IsOwnerOrReadOnly
 from .serializers import (FavoriteSerializers, IngredientSerializer,
@@ -25,7 +25,7 @@ class IngredientViewSet(ReadOnlyModelViewSet):
     serializer_class = IngredientSerializer
     permission_classes = (IsAdminOrReadOnly,)
     pagination_class = None
-    # filterset_class = IngredientNameFilter
+    filterset_class = IngredientNameFilter
     filter_backends = (filters.SearchFilter,)
     search_fields = ('^name',)
 
