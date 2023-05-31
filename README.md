@@ -54,4 +54,8 @@ docker-compose exec backend python manage.py collectstatic --no-input
 - Админ панель доступна по адресу [Admin Pages](http://ibelikbot.hopto.org/admin/)
 - Username/Password/Email суперпользователя: admin/admin/admin@admin.ru
 ### Авторы
-Владимир
+Беликов Владимир Игоревич
+Python-разработчик (Backend)
+Россия, г. Балашиха
+E-mail: belikrastr@yandex.ru
+Telegram: https://t.me/belikrastr
