@@ -53,7 +53,7 @@ docker-compose exec backend python manage.py collectstatic --no-input
 - Ссылка на развернутый проект на сервере [Foodgram Pages](http://ibelikbot.hopto.org/recipes)
 - Админ панель доступна по адресу [Admin Pages](http://ibelikbot.hopto.org/admin/)
 - Username/Password/Email суперпользователя: admin/admin/admin@admin.ru
-### Авторы
+### Автор проекта
 Беликов Владимир Игоревич
 Python-разработчик (Backend)
 Россия, г. Балашиха
