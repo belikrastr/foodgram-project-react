@@ -13,7 +13,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     'backend',
     'localhost',
-    '158.160.101.198',
+    '51.250.67.193',
     '127.0.0.1',
     'ibelikbot.hopto.org',
 ]
