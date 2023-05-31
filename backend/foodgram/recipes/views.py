@@ -1,5 +1,6 @@
 from django.http.response import HttpResponse
 from django.shortcuts import get_object_or_404
+from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import filters, status
 from rest_framework.decorators import action
 from rest_framework.permissions import IsAuthenticated
@@ -23,10 +24,8 @@ class TagViewSet(ReadOnlyModelViewSet):
 class IngredientViewSet(ReadOnlyModelViewSet):
     queryset = Ingredient.objects.all()
     serializer_class = IngredientSerializer
-    permission_classes = (IsAdminOrReadOnly,)
     pagination_class = None
-    filterset_class = IngredientNameFilter
-    filter_backends = (filters.SearchFilter,)
+    filter_backends = (DjangoFilterBackend, filters.SearchFilter)
     filterset_fields = ('name',)
     search_fields = ('name')
 
