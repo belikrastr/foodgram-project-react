@@ -88,8 +88,8 @@ Authorization: Token b51f7cbe34a87a866fbb1316a71ce3d339698751
 Content-Type: application/json
 ```js
 {
-"new_password": "Abc2332325.",
-"current_password": "Abc2332325"
+    "new_password": "Abc2332325.",
+    "current_password": "Abc2332325"
 }
 ```
 
