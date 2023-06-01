@@ -52,12 +52,12 @@ docker-compose exec backend python manage.py collectstatic --no-input
 ### Примеры запросов к API.
 - Список пользователей
 ###
-GET http://127.0.0.1:8000/api/users/
+GET http://ibelikbot.hopto.org/api/users/
 
 
 - Регистрация пользователя
 ###
-POST http://127.0.0.1:8000/api/users/
+POST http://ibelikbot.hopto.org/api/users/
 Content-Type: application/json
 ```js
 {
@@ -71,19 +71,19 @@ Content-Type: application/json
 
 - Профиль пользователя
 ###
-GET  http://127.0.0.1:8000/api/users/2/
+GET  http://ibelikbot.hopto.org/api/users/2/
 Authorization: Token de82a223ca36916a5fd4be6657caeec9a4618c8a
 
 
 - Текущий пользователь
 ###
-GET  http://127.0.0.1:8000/api/users/me/
+GET  http://ibelikbot.hopto.org/api/users/me/
 Authorization: Token de82a223ca36916a5fd4be6657caeec9a4618c8a
 
 
 - Изменение пароля
 ###
-POST http://127.0.0.1:8000/api/users/set_password/
+POST http://ibelikbot.hopto.org/api/users/set_password/
 Authorization: Token b51f7cbe34a87a866fbb1316a71ce3d339698751
 Content-Type: application/json
 ```js
@@ -95,7 +95,7 @@ Content-Type: application/json
 
 - Получить токен авторизации
 ###
-POST http://127.0.0.1:8000/api/auth/token/login/
+POST http://ibelikbot.hopto.org/api/auth/token/login/
 Content-Type: application/json
 ```js
 {
@@ -106,7 +106,7 @@ Content-Type: application/json
 
 - Удаление токена
 ###
-POST http://127.0.0.1:8000/api/auth/token/logout/
+POST http://ibelikbot.hopto.org/api/auth/token/logout/
 Authorization: Token b51f7cbe34a87a866fbb1316a71ce3d339698751
 Content-Type: application/json
 
@@ -114,22 +114,22 @@ Content-Type: application/json
 
 - Cписок тегов
 ###
-GET http://127.0.0.1:8000/api/tags/
+GET http://ibelikbot.hopto.org/api/tags/
 
 
 - Получение тега
 ###
-GET http://127.0.0.1:8000/api/tags/1/
+GET http://ibelikbot.hopto.org/api/tags/1/
 
 
 - Список рецептов
 ###
-GET http://127.0.0.1:8000/api/recipes/
+GET http://ibelikbot.hopto.org/api/recipes/
 
 
 - Создание рецепта
 ###
-POST http://127.0.0.1:8000/api/recipes/
+POST http://ibelikbot.hopto.org/api/recipes/
 Authorization: Token de82a223ca36916a5fd4be6657caeec9a4618c8a
 Content-Type: application/json
 ```js
@@ -152,12 +152,12 @@ Content-Type: application/json
 
 - Получение рецепта
 ###
-GET http://127.0.0.1:8000/api/recipes/9/
+GET http://ibelikbot.hopto.org/api/recipes/9/
 
 
 - Обновление рецепта
 ###
-PATCH http://127.0.0.1:8000/api/recipes/9/
+PATCH http://ibelikbot.hopto.org/api/recipes/9/
 Authorization: Token de82a223ca36916a5fd4be6657caeec9a4618c8a
 Content-Type: application/json
 ```js
@@ -180,74 +180,74 @@ Content-Type: application/json
 
 - Удаление рецепта
 ###
-DELETE  http://127.0.0.1:8000/api/recipes/7/
+DELETE  http://ibelikbot.hopto.org/api/recipes/7/
 Authorization: Token de82a223ca36916a5fd4be6657caeec9a4618c8a
 Content-Type: application/json
 
 
 - Скачать список покупок
 ###
-GET  http://127.0.0.1:8000/api/recipes/download_shopping_cart/
+GET  http://ibelikbot.hopto.org/api/recipes/download_shopping_cart/
 Authorization: Token de82a223ca36916a5fd4be6657caeec9a4618c8a
 
 
 - Добавить рецепт в список покупок
 ###
-POST http://127.0.0.1:8000/api/recipes/9/shopping_cart/
+POST http://ibelikbot.hopto.org/api/recipes/9/shopping_cart/
 Authorization: Token de82a223ca36916a5fd4be6657caeec9a4618c8a
 Content-Type: application/json
 
 
 - Удалить рецепт из списка покупок
 ###
-DELETE  http://127.0.0.1:8000/api/recipes/9/shopping_cart/
+DELETE  http://ibelikbot.hopto.org/api/recipes/9/shopping_cart/
 Authorization: Token de82a223ca36916a5fd4be6657caeec9a4618c8a
 Content-Type: application/json
 
 
 - Добавить рецепт в избранное
 ###
-POST http://127.0.0.1:8000/api/recipes/9/favorite/
+POST http://ibelikbot.hopto.org/api/recipes/9/favorite/
 Authorization: Token de82a223ca36916a5fd4be6657caeec9a4618c8a
 Content-Type: application/json
 
 
 - Удалить рецепт из избранного
 ###
-DELETE  http://127.0.0.1:8000/api/recipes/9/favorite/
+DELETE  http://ibelikbot.hopto.org/api/recipes/9/favorite/
 Authorization: Token de82a223ca36916a5fd4be6657caeec9a4618c8a
 Content-Type: application/json
 
 
 - Мои подписки
 ###
-GET  http://127.0.0.1:8000/api/users/subscriptions/
+GET  http://ibelikbot.hopto.org/api/users/subscriptions/
 Authorization: Token de82a223ca36916a5fd4be6657caeec9a4618c8a
 
 
 - Подписаться на пользователя
 ###
-POST http://127.0.0.1:8000/api/users/1/subscribe/
+POST http://ibelikbot.hopto.org/api/users/1/subscribe/
 Authorization: Token de82a223ca36916a5fd4be6657caeec9a4618c8a
 Content-Type: application/json
 
 
 - Отписаться от пользователя
 ###
-DELETE  http://127.0.0.1:8000/api/users/1/subscribe/
+DELETE  http://ibelikbot.hopto.org/api/users/1/subscribe/
 Authorization: Token de82a223ca36916a5fd4be6657caeec9a4618c8a
 Content-Type: application/json
 
 
 - Список ингредиентов
 ###
-GET  http://127.0.0.1:8000/api/ingredients/?search=р
+GET  http://ibelikbot.hopto.org/api/ingredients/?search=р
 Authorization: Token de82a223ca36916a5fd4be6657caeec9a4618c8a
 
 
 - Получение ингредиента
 ###
-GET  http://127.0.0.1:8000/api/ingredients/46002
+GET  http://ibelikbot.hopto.org/api/ingredients/46002
 Authorization: Token de82a223ca36916a5fd4be6657caeec9a4618c8a
 
 ### Проект в интернете
