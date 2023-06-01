@@ -21,6 +21,10 @@ class IngredientSerializer(serializers.ModelSerializer):
 
 
 class RecipeIngredientSerializers(serializers.ModelSerializer):
+    id = serializers.PrimaryKeyRelatedField(
+        source='ingredient',
+        queryset=Ingredient.objects.all()
+    )
     name = serializers.CharField(source="ingredient.name")
     measurement_unit = serializers.CharField(
         source="ingredient.measurement_unit"
