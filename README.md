@@ -49,6 +49,7 @@ docker-compose exec backend python manage.py createsuperuser
 ```bash
 docker-compose exec backend python manage.py collectstatic --no-input
 ```
+- Теперь сайт доступен по ссылке [Foodgram Pages](http://localhost/recipes)
 ### Примеры запросов к API.
 - Список пользователей
 ###
